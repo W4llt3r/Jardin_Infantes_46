@@ -7,16 +7,27 @@
     <script src="https://kit.fontawesome.com/effc41ecd8.js" crossorigin="anonymous"></script>
     <title>Jardín de Infantes</title>
 </head>
+
 <body>
     <header>
-        <h1>Jardín de infantes 46</h1>
-        <nav>
-            <a href="#inicio">Inicio</a>
-            <a href="#actividades">Actividades</a>
-            <a href="#contacto">Contacto</a>
-        </nav>
-    </header>
+    <h1>Jardín de infantes 46</h1>
 
+    <!-- Icono hamburguesa animado -->
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <nav id="navMenu">
+        <a href="#inicio">Inicio</a>
+        <a href="#actividades">Actividades</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+</header>
+
+
+    <!-- HERO -->
     <section class="hero" id="inicio">
         <h2>¡Aprender jugando cada día!</h2>
         <p>En el Jardín 46 acompañamos el desarrollo de cada niño con amor, creatividad y alegría.</p>
@@ -26,27 +37,32 @@
     <main>
         <section class="actividades" id="actividades">
             <h3>Nuestras Actividades</h3>
-        <div class="cards">
-            <div class="card">
-                <img src="imgs/niños_jugando.jpg" alt="rompecabezas">
-                <p>Razonamiento</p>
+
+            <div class="cards">
+                <div class="card">
+                    <img src="imgs/niños_jugando.jpg" alt="rompecabezas">
+                    <p>Razonamiento</p>
+                </div>
+
+                <div class="card">
+                    <img src="imgs/juego_ingenio_jardin.jpg" alt="ingenio">
+                    <p>Ingenio</p>
+                </div>
+
+                <div class="card">
+                    <img src="imgs/huellas.jpg" alt="pintura">
+                    <p>Dibujo</p>
+                </div>
+
+                <div class="card">
+                    <img src="imgs/miro-pajaro.jpg" alt="arte">
+                    <p>Arte</p>
+                </div>
             </div>
-            <div class="card">
-                <img src="imgs/juego_ingenio_jardin.jpg" alt="ingenio">
-                <p>Ingenio</p>
-            </div>
-            <div class="card">
-                <img src="imgs/huellas.jpg" alt="pintura">
-                <p>dibujo</p>
-            </div>
-            <div class="card">
-                <img src="imgs/miro-pajaro.jpg" alt="pintura">
-                <p>arte</p>
-            </div>
-        </div>
-    </section>
+        </section>
     </main>
 
+    <!-- FOOTER -->
     <footer id="contacto">
         <div id="redes">
             <ul>
@@ -55,14 +71,36 @@
                 <li><i class="fa-brands fa-instagram"></i></li>
             </ul>
         </div>
+
         <form id="formulario">
             <h4>Contacto</h4>
-                <input type="text" placeholder="Nombre del padre/madre" required>
-                <input type="email" placeholder="Correo electrónico" required>
-                <textarea placeholder="Consulta o mensaje" rows="3"></textarea>
+            <input type="text" placeholder="Nombre del padre/madre" required>
+            <input type="email" placeholder="Correo electrónico" required>
+            <textarea placeholder="Consulta o mensaje" rows="3"></textarea>
             <button type="submit">Enviar</button>
         </form>
     </footer>
-    <p>Alumno Rios Walter</p>
+
+    <!-- SCRIPT PARA MENU HAMBURGUESA -->
+    <script>
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.getElementById("navMenu");
+
+    hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("open");
+        navMenu.classList.toggle("active");
+    });
+
+    // cerrar menú al tocar un enlace
+    document.querySelectorAll("#navMenu a").forEach(link => {
+        link.addEventListener("click", () => {
+            navMenu.classList.remove("active");
+            hamburger.classList.remove("open");
+        });
+    });
+</script>
+
+
 </body>
 </html>
+
