@@ -1,4 +1,4 @@
-    @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
 /* ===== ESTILOS GENERALES ===== */
 body{
@@ -40,7 +40,7 @@ nav a:hover {
     color: #ff7b54;
 }
 
-/* BOTÓN HAMBURGUESA */
+
 /* BOTÓN HAMBURGUESA ANIMADO */
 .hamburger {
     display: none;
@@ -219,7 +219,7 @@ button:hover {
         flex-direction: column;
         text-align: center;
         overflow: hidden;
-        max-height: 0;              /* cerrado */
+        max-height: 0;     
         opacity: 0;
         padding: 0;
         border-bottom: 3px solid #ffd19a;
@@ -227,7 +227,7 @@ button:hover {
     }
 
     nav.active {
-        max-height: 300px;          /* abierto */
+        max-height: 300px;         
         opacity: 1;
         padding: 20px 0;
     }

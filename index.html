@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/effc41ecd8.js" crossorigin="anonymous"></script>
+    <script src="funciones.js" defer></script>
     <title>Jardín de Infantes</title>
 </head>
 
@@ -80,27 +81,6 @@
             <button type="submit">Enviar</button>
         </form>
     </footer>
-
-    <!-- SCRIPT PARA MENU HAMBURGUESA -->
-    <script>
-    const hamburger = document.getElementById("hamburger");
-    const navMenu = document.getElementById("navMenu");
-
-    hamburger.addEventListener("click", () => {
-        hamburger.classList.toggle("open");
-        navMenu.classList.toggle("active");
-    });
-
-    // cerrar menú al tocar un enlace
-    document.querySelectorAll("#navMenu a").forEach(link => {
-        link.addEventListener("click", () => {
-            navMenu.classList.remove("active");
-            hamburger.classList.remove("open");
-        });
-    });
-</script>
-
-
 </body>
 </html>
 
